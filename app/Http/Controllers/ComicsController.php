@@ -13,6 +13,8 @@ class ComicsController extends Controller
      */
     public function index()
     {
+        // $comics = Comics::all();
+        
         return view("comics.index");
     }
 
@@ -23,7 +25,7 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        //
+        return view("comics.create");
     }
 
     /**
@@ -34,7 +36,10 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $data = $request->all();
+        // dump($data);
+
+        return redirect()->route("comics.show");
     }
 
     /**
@@ -43,9 +48,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        // $user = Comics::find($id);
+
+        return view("comics.show");
     }
 
     /**

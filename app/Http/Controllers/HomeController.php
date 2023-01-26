@@ -8,8 +8,8 @@ class HomeController extends Controller
 {
     public function home() {
 
-        $hello = 'Hello World!';
+        $title = 'Laravel Dc Comics';
 
-        return view("home", compact('hello'));
+        return view("home", compact('title'));
     }
 }
