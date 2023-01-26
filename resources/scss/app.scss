@@ -1,1 +1,7 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+form label {
+    color: white;
+    font-weight: bold;
+    margin: 1.5rem 0;
+};
