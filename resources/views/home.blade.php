@@ -6,8 +6,6 @@
 </div>
 <div class="py-5 text-center border rounded">
     <a href="{{route("comics.index")}}"><button class="btn btn-primary">Go to Index</button></a>
-    <a href="{{route("comics.show")}}"><button class="btn btn-info mx-4 text-white">Go to Show</button></a>
-    <a href="{{route("comics.create")}}"><button class="btn btn-success">Go to Create</button></a>
-    <a href="{{route("comics.edit")}}"><button class="btn btn-danger ms-4">Go to Edit</button></a>
+    <a href="{{route("comics.create")}}"><button class="btn btn-info mx-4">Go to Create</button></a>
 </div>
 @endsection

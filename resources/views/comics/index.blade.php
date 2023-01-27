@@ -21,10 +21,14 @@
                             <p class="text-secondary">{{ $comic->type }}</p>
                             <span class="mt-auto">$ {{ $comic->price }}</span>
                         </div>
-                        <div class="card-footer text-center">
+                        <div class="card-footer d-flex align-items-center gap-4">
                             <a href="{{ route('comics.show', $comic->id) }}" class="text-decoration-none fw-semibold">Show more</a>
-                            <a href="{{ route('comics.edit', $comic->id) }}" class="text-decoration-none fw-semibold mx-4">Edit</a>
-                            <a href="{{ route('comics.destroy', $comic->id) }}" class="text-decoration-none fw-semibold">Delete</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="text-decoration-none fw-semibold">Edit</a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @csrf()
+                                @method('delete')
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>

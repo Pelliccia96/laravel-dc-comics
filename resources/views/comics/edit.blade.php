@@ -6,8 +6,9 @@
         <h1 class="text-white">Edit Comics #{{ $comic->id }}</h1>
     </div>
     <div>
-        <form action="{{ route('comics.store') }}" method="POST" class="p-5">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST" class="p-5">
             @csrf
+            @method('put')
 
             <label class="form-label">Title: </label>
             <input type="text" name="title" class="form-control">

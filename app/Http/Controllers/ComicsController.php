@@ -59,9 +59,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show($id)
     {
-        // $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
 
         return view('comics.show', compact('comic'));
     }
@@ -72,9 +72,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit($id)
     {
-        // $comic = Comic::findOrFail($id);
+        $comic = Comic::findOrFail($id);
 
         return view('comics.edit', compact('comic'));
     }
@@ -93,7 +93,7 @@ class ComicsController extends Controller
         $comic = Comic::findOrFail($id);
         $comic->update($data);
 
-        return redirect()->route("products.show", $comic->id);
+        return redirect()->route("comics.index", $comic->id);
     }
 
     /**
@@ -108,6 +108,6 @@ class ComicsController extends Controller
         
         $comic->delete();
 
-        return redirect()->route("products.index");
+        return redirect()->route("comics.index");
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="my-5">
-    <div class="text-center">
+    <div class="text-center my-5">
         <h1 class="text-primary">{{ $comic->title }}</h1>
     </div>
     <div class="row">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="text-center mt-5">
-        <a href="{{route("home")}}"><button class="btn btn-primary">Back to Home</button></a>
+        <a href="{{route("comics.index")}}"><button class="btn btn-primary">Back to Home</button></a>
     </div>
 </div>
 @endsection
