@@ -23,6 +23,8 @@
                         </div>
                         <div class="card-footer text-center">
                             <a href="{{ route('comics.show', $comic->id) }}" class="text-decoration-none fw-semibold">Show more</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="text-decoration-none fw-semibold mx-4">Edit</a>
+                            <a href="{{ route('comics.destroy', $comic->id) }}" class="text-decoration-none fw-semibold">Delete</a>
                         </div>
                     </div>
                 </div>
