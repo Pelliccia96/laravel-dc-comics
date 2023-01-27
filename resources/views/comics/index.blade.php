@@ -24,7 +24,7 @@
                         <div class="card-footer d-flex align-items-center gap-4">
                             <a href="{{ route('comics.show', $comic->id) }}" class="text-decoration-none fw-semibold">Show more</a>
                             <a href="{{ route('comics.edit', $comic->id) }}" class="text-decoration-none fw-semibold">Edit</a>
-                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form">
                                 @csrf()
                                 @method('delete')
                                 <button class="btn btn-danger">Delete</button>
@@ -36,4 +36,16 @@
             </div>
         @endforeach
     </div>
+    <script>
+        const forms = document.querySelectorAll(".delete-form");
+        forms.forEach((form) => {
+            form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const conferma = confirm("Sicuro?");
+            if (conferma === true) {
+                form.submit();
+            }
+            })
+        })
+    </script>
 @endsection
