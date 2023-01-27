@@ -32,9 +32,11 @@
 
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary me-3">Send</button>
-                <a href="{{route("home")}}"><button class="btn btn-danger">Back to Home</button></a>
             </div>
         </form>
+        <div class="text-center">
+            <a href="{{route("home")}}"><button class="btn btn-danger">Back to Home</button></a>
+        </div>
     </div>
 </div>
 @endsection
