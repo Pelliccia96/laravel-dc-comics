@@ -5,10 +5,10 @@
     <div class="text-center">
         <h1 class="text-primary">{{ $comic->title }}</h1>
     </div>
-   <div class="row">
+    <div class="row">
         <div class="col-auto">
             <div>
-                <img src="{{ $comic->thumb }}" alt="No img found" class="img-fluid">
+                <img src="{{ $comic->thumb }}" alt="" class="img-fluid">
             </div>
         </div>
         <div class="col">
@@ -30,8 +30,8 @@
                 </li>
             </ul>
         </div>
-   </div>
-    <div class="mt-5">
+    </div>
+    <div class="text-center mt-5">
         <a href="{{route("home")}}"><button class="btn btn-primary">Back to Home</button></a>
     </div>
 </div>

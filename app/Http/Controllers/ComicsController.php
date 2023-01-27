@@ -50,7 +50,7 @@ class ComicsController extends Controller
         $comic->type = $data['type'];
         $comic->save();
 
-        return redirect()->route('comics.show', $comic);
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -72,9 +72,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        // $comic = Comic::find($id);
+
+        return view('comics.edit', compact('comic'));
     }
 
     /**
