@@ -4,7 +4,7 @@
     <div class="my-5 text-center">
         <h1 class="text-white py-3">Comics list</h1>
         <a href="{{ route('comics.create') }}" class="btn btn-primary fw-semibold mx-3">&plus; Add New Comics</a>
-        <a href="{{route("home")}}"><button class="btn btn-danger fw-semibold">Back to Home</button></a>
+        <a href="{{route("home")}}"><button class="btn btn-info fw-semibold text-white">Back to Home</button></a>
     </div>
     <div class="row">
         @foreach ($comics as $comic)
