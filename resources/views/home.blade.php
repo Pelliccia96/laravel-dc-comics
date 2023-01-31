@@ -10,7 +10,7 @@
     </div>
     <div class="py-5 mb-5 text-center">
         <a href="{{route("comics.index")}}"><button class="btn btn-primary">Go to Index</button></a>
-        <a href="{{route("comics.create")}}"><button class="btn btn-info mx-4">Go to Create</button></a>
+        <a href="{{route("comics.create")}}"><button class="btn btn-info mx-4 text-white">Go to Create</button></a>
     </div>
 </div>
 @endsection
