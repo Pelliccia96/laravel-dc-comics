@@ -23,30 +23,66 @@
 
             <label class="form-label">Title: </label>
             <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
-                value="{{ $errors->has('title') ? '' : old('title') }}">
-                @error('title')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                @enderror
+            value="{{ $errors->has('title') ? '' : old('title') }}">
+            @error('title')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
 
             <label class="form-label">Description: </label>
-            <input type="text" name="description" class="form-control" value="{{ old('description') }}">
+            <input type="text" name="description" class="form-control @error('description') is-invalid @enderror"
+            value="{{ $errors->has('description') ? '' : old('description') }}">
+            @error('description')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <label class="form-label">Thumb: </label>
-            <input type="text" name="thumb" class="form-control" placeholder="null" value="{{ old('thumb') }}">
+            <input type="text" name="thumb" class="form-control @error('thumb') is-invalid @enderror" placeholder="null"
+            value="{{ $errors->has('thumb') ? '' : old('thumb') }}">
+            @error('thumb')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <label class="form-label">Price: </label>
-            <input type="number" step="0.01" name="price" class="form-control" value="{{ old('price') }}">
+            <input type="number" step="0.01" name="price" class="form-control @error('price') is-invalid @enderror"
+            value="{{ $errors->has('price') ? '' : old('price') }}">
+            @error('price')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <label class="form-label">Series: </label>
-            <input type="text" name="series" class="form-control" value="{{ old('series') }}">
+            <input type="text" name="series" class="form-control @error('series') is-invalid @enderror"
+            value="{{ $errors->has('series') ? '' : old('series') }}">
+            @error('series')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <label class="form-label">Sale date: </label>
-            <input type="date" name="sale_date" class="form-control" value="{{ old('sale_date') }}">
+            <input type="date" name="sale_date" class="form-control @error('sale_date') is-invalid @enderror"
+            value="{{ $errors->has('sale_date') ? '' : old('sale_date') }}">
+            @error('sale_date')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <label class="form-label">Type: </label>
-            <input type="text" name="type" class="form-control" value="{{ old('type') }}">
+            <input type="text" name="type" class="form-control @error('type') is-invalid @enderror"
+            value="{{ $errors->has('type') ? '' : old('type') }}">
+            @error('type')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
 
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary me-3">Send</button>

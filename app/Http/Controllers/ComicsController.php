@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 use App\Models\Comic;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ComicsController extends Controller
 {
@@ -36,17 +39,10 @@ class ComicsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        $data = $request->validate([
-            "title" => "required|min:1|max:255",
-            "description" => "required|string",
-            "thumb" => "required|url",
-            "price" => "required",
-            "series" => "required|string",
-            "sale_date" => "required",
-            "type" => "required|string",
-        ]);
+        // validated() usa le regole indicate nella funzione rules dello StorePostRequest e ci ritorna i dati validati
+        $data = $request->validated();
         
         // $data = $request->all();
 
@@ -96,17 +92,10 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePostRequest $request, $id)
     {
-        $data = $request->validate([
-            "title" => "required|min:1|max:255",
-            "description" => "required|string",
-            "thumb" => "required|url",
-            "price" => "required",
-            "series" => "required|string",
-            "sale_date" => "required",
-            "type" => "required|string",
-        ]);
+        // validated() usa le regole indicate nella funzione rules dell'UpdatePostRequest e ci ritorna i dati validati
+        $data = $request->validated();
 
         // $data = $request->all();
 
