@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="text-center my-5">
+<div class="text-center my-5 py-3">
     <h1 class="text-white">{{ $title }}</h1>
 </div>
 <div class="bg-secondary my-5 border rounded">
